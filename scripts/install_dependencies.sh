@@ -1,10 +1,11 @@
 #!/bin/bash
-# Install Python and pip if not installed
-sudo yum install -y python3
-python3 -m ensurepip --upgrade
+# Switch to the project directory
+cd /home/ec2-user/Gemini-AI || exit 1
 
-# Navigate to the project directory
-cd /home/ec2-user/Gemini-AI || exit
+# Install Python and pip if not installed
+sudo yum install -y python3 || exit 1
+python3 -m ensurepip --upgrade || exit 1
 
 # Install dependencies
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt || exit 1
+
