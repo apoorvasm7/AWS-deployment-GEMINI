@@ -11,7 +11,8 @@ sudo python3 -m pip install --upgrade pip
 mkdir -p /home/ec2-user/Gemini-AI
 cd /home/ec2-user/Gemini-AI || exit 1
 
+# Copy the requirements.txt from the deployment package to the project directory
+cp /opt/codedeploy-agent/deployment-root/deployment-archive/requirements.txt .
+
 # Install Python dependencies using pip3
 python3 -m pip install -r requirements.txt || exit 1
-
-
