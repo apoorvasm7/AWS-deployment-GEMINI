@@ -44,3 +44,19 @@ Feel free to explore and customize the code according to your needs. Contributio
 **Notes**
 * Ensure that you have Python installed on your system.
 * Use a virtual environment for better isolation of dependencies.
+
+### Step 5 : Deployment
+
+sudo yum update -y
+sudo yum install ruby -y
+sudo yum install wget -y
+cd /home/ec2-user
+wget https://aws-codedeploy-us-west-2.s3.us-west-2.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo service codedeploy-agent start
+
+### Step 6 : Verification
+
+sudo service codedeploy-agent status
+
