@@ -2,12 +2,14 @@
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
+echo "Starting script execution..."
+
 # Install Python 3 and pip3 if not installed
-echo "Installing Python 3..."
+echo "Installing Python 3 and pip3..."
 sudo yum install -y python3 python3-pip || { echo "Failed to install Python 3 or pip"; exit 1; }
 
 # Ensure pip3 is available and upgrade it
-echo "Ensuring pip3 is available..."
+echo "Ensuring pip3 is available and upgrading..."
 python3 -m ensurepip --upgrade || { echo "Failed to ensure pip3"; exit 1; }
 sudo python3 -m pip install --upgrade pip || { echo "Failed to upgrade pip"; exit 1; }
 
