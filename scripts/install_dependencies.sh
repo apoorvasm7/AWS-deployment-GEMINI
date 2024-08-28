@@ -7,7 +7,7 @@ sudo yum install -y python3
 python3 -m ensurepip --upgrade
 
 # Optionally, upgrade pip3 to the latest version
-sudo pip3 install --upgrade pip
+sudo pip install --upgrade pip
 
 # Navigate to the project directory
 mkdir -p /home/ec2-user/Gemini-AI
