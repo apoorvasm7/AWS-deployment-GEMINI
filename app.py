@@ -7,6 +7,7 @@ app.secret_key = 'supersecretkey'
 
 # Configure the Generative AI model
 genai.configure(api_key="AIzaSyBlVrCUXIZZJWgzGma0FwlDxsKZq_vxLvg")
+
 model = genai.GenerativeModel('gemini-pro')
 
 def init_db():
