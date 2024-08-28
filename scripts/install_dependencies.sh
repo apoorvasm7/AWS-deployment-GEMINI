@@ -4,7 +4,7 @@ set -e  # Exit immediately if a command exits with a non-zero status
 
 # Install Python 3 and pip3 if not installed
 echo "Installing Python 3..."
-sudo yum install -y python3 || { echo "Failed to install Python 3"; exit 1; }
+sudo yum install -y python3 python3-pip || { echo "Failed to install Python 3 or pip"; exit 1; }
 
 # Ensure pip3 is available and upgrade it
 echo "Ensuring pip3 is available..."
@@ -22,6 +22,6 @@ cp /opt/codedeploy-agent/deployment-root/deployment-archive/requirements.txt . |
 
 # Install Python dependencies using pip3
 echo "Installing dependencies from requirements.txt..."
-python3 -m pip install -r requirements.txt || { echo "Failed to install dependencies"; exit 1; }
+sudo python3 -m pip install -r requirements.txt || { echo "Failed to install dependencies"; exit 1; }
 
 echo "Script executed successfully."
