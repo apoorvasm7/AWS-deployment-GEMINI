@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/GEMINI-AI
+    destination: /home/ec2-user/AWS-deployment-GEMINI
 
 hooks:
   BeforeInstall:
